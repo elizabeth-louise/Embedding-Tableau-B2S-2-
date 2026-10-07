@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back to School🌼</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Bench Time 🎉</h1>
+    <h5>Hooray!</h5>
+
+    <fieldset>
+      <legend>Filter The View!</legend>
+      <input type="button" value="Oregon and Washington only" id="onw" />
+      <input type="button" value="Clear Filter" id="clear" />
+      <input type="button" value="Undo" id="undo" />
+    </fieldset>
+
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+
+    <tableau-viz
+      id="tableauViz"
+      src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+      toolbar="bottom"
+      hide-tabs
+      height="1000px"
+      width="1000px"
+    >
+    </tableau-viz>
+    <script src="app.js"></script>
+
+    <!-- demo text -->
+    <p>this is a paragraph</p>
+    <div class="redclass">this is a div</div>
+    <div class="redclass" id="special">another div</div>
+    <span>this is a span</span>
+    <span>another span</span>
+    <ul>
+      this is an an unordered list
+    </ul>
+    <ul>
+      another ul
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+div {
+  background-color: orchid;
+  height: 400px;
+  width: 500px;
+  margin: 20px;
+  padding: 25px;
+}
+
+.redclass {
+  /*. used to specify the class from the html*/
+  background-color: hotpink;
+}
+
+#special {
+  /* # uses to specify the id, the more specific*/
+  background-color: cornflowerblue;
+  height: 100px;
+}
