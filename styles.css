@@ -1,18 +1,293 @@
+/* ===== Whimsical Purple & Pink Theme ===== */
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Pacifico&display=swap");
+
+:root {
+  --lavender: #e9d8fd;
+  --lilac: #c9a7f5;
+  --purple: #8e44ec;
+  --deep-purple: #5b2a9e;
+  --pink: #ff8fd0;
+  --hot-pink: #ff4fa8;
+  --blush: #ffe3f3;
+  --cream: #fff8fd;
+  --shadow: rgba(142, 68, 236, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.5rem 4rem;
+  font-family: "Baloo 2", "Comic Sans MS", cursive, sans-serif;
+  color: var(--deep-purple);
+  line-height: 1.6;
+  text-align: center;
+  min-height: 100vh;
+  background: radial-gradient(
+      circle at 10% 15%,
+      rgba(255, 143, 208, 0.45) 0 80px,
+      transparent 81px
+    ),
+    radial-gradient(
+      circle at 90% 25%,
+      rgba(201, 167, 245, 0.5) 0 110px,
+      transparent 111px
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(201, 167, 245, 0.4) 0 90px,
+      transparent 91px
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(255, 143, 208, 0.4) 0 70px,
+      transparent 71px
+    ),
+    linear-gradient(135deg, var(--lavender), var(--blush) 50%, var(--lavender));
+  background-attachment: fixed;
+}
+
+/* ===== Headings ===== */
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  margin: 0.5rem 0;
+  background: linear-gradient(
+    90deg,
+    var(--purple),
+    var(--hot-pink),
+    var(--purple)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+  filter: drop-shadow(3px 3px 0 rgba(255, 255, 255, 0.8));
+}
+
+h5 {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 0 2rem;
+  padding: 0.3rem 1.2rem;
+  color: white;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  border-radius: 999px;
+  box-shadow: 0 4px 12px var(--shadow);
+  transform: rotate(-3deg);
+  animation: wiggle 2.5s ease-in-out infinite;
+}
+
+/* ===== Filter Fieldset ===== */
+
+fieldset {
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 4px dashed var(--lilac);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+legend {
+  padding: 0.2rem 1.2rem;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: white;
+  background: linear-gradient(135deg, var(--purple), var(--hot-pink));
+  border-radius: 999px;
+  box-shadow: 0 3px 8px var(--shadow);
+}
+
+/* ===== Buttons ===== */
+
+input[type="button"] {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.4rem 0.25rem;
+  padding: 0.7rem 1.4rem;
+  color: white;
+  background: linear-gradient(135deg, var(--purple), var(--hot-pink));
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 var(--deep-purple), 0 8px 15px var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.2s;
+}
+
+input[type="button"]:hover {
+  transform: translateY(-3px) scale(1.06) rotate(-1.5deg);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 0 var(--deep-purple), 0 12px 20px var(--shadow);
+}
+
+input[type="button"]:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--deep-purple), 0 3px 6px var(--shadow);
+}
+
+input[type="button"]:focus-visible {
+  outline: 4px solid var(--pink);
+  outline-offset: 3px;
+}
+
+#clear {
+  background: linear-gradient(135deg, var(--pink), var(--lilac));
+}
+
+#undo {
+  background: linear-gradient(135deg, var(--lilac), var(--purple));
+}
+
+/* ===== Tableau Viz ===== */
+
+tableau-viz {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 3rem;
+  padding: 12px;
+  background: white;
+  border: 6px solid transparent;
+  border-radius: 28px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(135deg, var(--purple), var(--hot-pink), var(--lilac));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 15px 40px var(--shadow);
+}
+
+/* ===== Demo Elements ===== */
+
+p {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  font-size: 1.15rem;
+  background: var(--cream);
+  border-left: 8px solid var(--hot-pink);
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+p::before {
+  content: "🌸 ";
+}
+
 div {
-  background-color: orchid;
-  height: 400px;
-  width: 500px;
-  margin: 20px;
-  padding: 25px;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--blush), var(--lavender));
+  border: 3px dotted var(--purple);
+  border-radius: 24px;
+  transition: transform 0.25s ease;
+}
+
+div:hover {
+  transform: rotate(2deg) scale(1.04);
 }
 
 .redclass {
-  /*. used to specify the class from the html*/
-  background-color: hotpink;
+  /* Named "red" but we've kept it on theme! Swap in red if you prefer. */
+  color: var(--hot-pink);
+  border-color: var(--hot-pink);
+  background: linear-gradient(135deg, #fff0fa, var(--blush));
 }
 
 #special {
-  /* # uses to specify the id, the more specific*/
-  background-color: cornflowerblue;
-  height: 100px;
+  color: white;
+  background: linear-gradient(135deg, var(--purple), var(--hot-pink));
+  border: 3px solid white;
+  box-shadow: 0 0 0 4px var(--purple), 0 8px 20px var(--shadow);
+  animation: float 3s ease-in-out infinite;
+}
+
+span {
+  display: inline-block;
+  margin: 0.5rem 0.3rem;
+  padding: 0.35rem 1rem;
+  font-weight: 600;
+  color: var(--deep-purple);
+  background: var(--lilac);
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+span:hover {
+  background: var(--pink);
+  transform: scale(1.15) rotate(-4deg);
+}
+
+ul {
+  max-width: 400px;
+  margin: 1.2rem auto;
+  padding: 1rem 1.5rem;
+  list-style: none;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.75);
+  border: 3px solid var(--lilac);
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 var(--pink);
+}
+
+ul::before {
+  content: "✨ ";
+}
+
+/* ===== Animations ===== */
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg) scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ===== Accessibility & Responsiveness ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  tableau-viz {
+    width: 100% !important;
+  }
 }
